@@ -27,7 +27,7 @@ body{
 }
 @keyframes typingAnimation{
   from{width: 0;}
-  to{width: 28em;}
+  to{width: 29em;}
 }
 @keyframes blinkingCursor{
   from{border-right-color: #dd3333;}
