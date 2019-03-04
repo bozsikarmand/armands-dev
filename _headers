@@ -1,3 +1,4 @@
-main.css
-  # Far future expiration header
-  Cache-Control = "public, max-age=604800"
+[[headers]]
+  for = "*.css"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
