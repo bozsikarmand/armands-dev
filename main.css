@@ -15,7 +15,7 @@ body{
     width: 24em;
     margin: 0 auto;
     border-right: 2px solid rgba(255,255,255,.75);
-    font-size: 2.2vw;
+    font-size: 180%;
     text-align: center;
     white-space: nowrap;
     overflow: hidden;
@@ -32,4 +32,9 @@ body{
 @keyframes blinkingCursor{
   from{border-right-color: #dd3333;}
   to{border-right-color: transparent;}
+}
+@media (max-width: 600px) {
+  .line {
+    color: lightblue;
+  }
 }
