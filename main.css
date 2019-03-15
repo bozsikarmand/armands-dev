@@ -35,6 +35,6 @@ body{
 }
 @media (max-width: 600px) {
   .line {
-    color: lightblue;
+     word-wrap: break-word;
   }
 }
