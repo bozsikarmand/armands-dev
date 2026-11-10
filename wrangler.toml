@@ -1,0 +1,9 @@
+name = "armands-dev"
+compatibility_date = "2026-11-08"
+
+[assets]
+directory = "public"
+
+[observability.logs]
+enabled = true
+invocation_logs = true
