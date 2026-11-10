@@ -1,0 +1,25 @@
+{{ define "main" }}
+{{- $projects := index site.Data site.Language.LanguageCode | default (index site.Data "en") -}}
+{{- $projects = index $projects "projects" -}}
+<div class="introduction">
+  <h1>{{ i18n "ui.greeting" }}</h1>
+  <span class="self-identification">{{ i18n "ui.projects_title" }}</span>
+</div>
+
+<div class="filter-bar" role="group" aria-label="{{ i18n "ui.filter" }}">
+  <button type="button" class="filter-btn is-active" data-filter="all">{{ i18n "ui.filter_all" }}</button>
+  <button type="button" class="filter-btn" data-filter="software">{{ i18n "ui.cat_software" }}</button>
+  <button type="button" class="filter-btn" data-filter="homelab">{{ i18n "ui.cat_homelab" }}</button>
+</div>
+
+<div class="project-grid" id="project-grid">
+  {{ range $projects }}
+    {{ partial "project-card.html" . }}
+  {{ end }}
+</div>
+<p class="filter-empty" id="filter-empty" hidden>{{ i18n "ui.filter_empty" }}</p>
+{{ end }}
+
+{{ define "scripts" }}
+<script src="/assets/scripts/project-filter.js" defer></script>
+{{ end }}

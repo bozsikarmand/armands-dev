@@ -1,0 +1,13 @@
+baseURL = "https://armands.dev/"
+title = "Armand Viktor Bozsik — Projects"
+theme = ["hugo-theme-armands-dev"]
+defaultContentLanguage = "en"
+defaultContentLanguageInSubdir = true
+enableRobotsTXT = true
+disableKinds = ["taxonomy", "term", "RSS"]
+
+[outputs]
+  home = ["HTML"]
+
+[params]
+  description = "Projects and homelab of Armand Viktor Bozsik — software developer."

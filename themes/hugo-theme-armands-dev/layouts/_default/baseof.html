@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.Language.LanguageCode }}">
+<head>
+  {{ partial "head.html" . }}
+</head>
+<body class="page-portfolio">
+  {{ partial "nav.html" . }}
+  <main class="site-main">
+    <div class="wrap">
+      {{ block "main" . }}{{ end }}
+      {{ partial "social.html" . }}
+    </div>
+  </main>
+  {{ partial "footer.html" . }}
+  {{ block "scripts" . }}{{ end }}
+</body>
+</html>

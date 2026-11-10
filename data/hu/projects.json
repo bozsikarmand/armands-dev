@@ -1,0 +1,52 @@
+[
+  {
+    "id": "bar-project",
+    "title": "Bar Project",
+    "summary": "Interaktív 3D bár-vizualizáció számítógépes grafika kurzusra — WebGL, saját shaderek és procedurális geometria.",
+    "tags": ["WebGL", "Three.js", "GLSL", "Számítógépes Grafika"],
+    "category": "software",
+    "links": { "repo": "https://gitlab.com/bozsikarmand", "live": "https://bar.armands.dev" },
+    "featured": true,
+    "detail": true
+  },
+  {
+    "id": "personal-sites",
+    "title": "Személyes oldal-rendszer",
+    "summary": "armands.blog · armands.cv · armands.site — három Hugo-oldal egységes Monokai dizájnrendszerrel, egységes CV-adatforrással, CI-vel épített PDF-ekkel és közös kapcsolati csővezetékkel (Cloudflare Worker + Zoho Mail + Turnstile).",
+    "tags": ["Hugo", "Cloudflare Workers", "GitLab CI", "Dizájnrendszer"],
+    "category": "software",
+    "links": { "repo": "https://gitlab.com/bozsikarmand", "live": "https://armands.site" },
+    "featured": true,
+    "detail": true
+  },
+  {
+    "id": "homelab-k3s",
+    "title": "Homelab Kubernetes cluster",
+    "summary": "Saját üzemeltetésű k3s klaszter GitOps folyamatos szállítással — minden szolgáltatás Gitben deklarálva, Argo CD automatikusan telepíti.",
+    "tags": ["k3s", "Kubernetes", "Argo CD", "GitOps", "Homelab"],
+    "category": "homelab",
+    "links": { "repo": "", "live": "https://argocd.armands.dev" },
+    "featured": false,
+    "detail": false
+  },
+  {
+    "id": "selfhosted-gitlab",
+    "title": "Saját üzemeltetésű GitLab",
+    "summary": "Privát GitLab-példány a család repóival, CI-runner-ekkel és container registry-vel — függetlenül a külső SaaS-októl.",
+    "tags": ["GitLab", "CI/CD", "Docker", "Self-hosting"],
+    "category": "homelab",
+    "links": { "repo": "", "live": "https://git.armands.dev" },
+    "featured": false,
+    "detail": false
+  },
+  {
+    "id": "cloudflare-tunnels",
+    "title": "Cloudflare Tunnel ingress",
+    "summary": "A homelab összes szolgáltatása Cloudflare Tunnellen keresztül érhető el biztonságosan — nyitott portok és publikus IP-k nélkül, Access-szabályozással.",
+    "tags": ["Cloudflare", "Zero Trust", "Hálózat", "Biztonság"],
+    "category": "homelab",
+    "links": { "repo": "", "live": "" },
+    "featured": false,
+    "detail": false
+  }
+]

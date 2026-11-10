@@ -1,0 +1,38 @@
+<button type="button" id="menu-toggle" class="menu-fab" aria-expanded="false" aria-controls="site-topbar"
+        aria-label="{{ i18n "ui.menuOpen" }}">☰</button>
+<div class="menu-backdrop" id="menu-backdrop" hidden></div>
+<nav class="topbar" id="site-topbar" role="navigation" aria-label="main navigation">
+  <div class="topbar__inner">
+    <a class="topbar__brand" href="{{ relLangURL "/" }}">{{ .Site.Title }}</a>
+    <ul class="topbar__menu">
+      <li><a href="{{ relLangURL "/" }}"><i class="fas fa-home"></i> {{ i18n "ui.nav_home" }}</a></li>
+      <li><a href="{{ relLangURL "/projects/" }}"><i class="fas fa-diagram-project"></i> {{ i18n "ui.nav_projects" }}</a></li>
+      <li><a href="https://armands.blog"><i class="fas fa-blog"></i> {{ i18n "ui.nav_blog" }}</a></li>
+      <li><a href="https://armands.cv"><i class="fas fa-file-lines"></i> {{ i18n "ui.nav_cv" }}</a></li>
+      <li><a href="{{ relLangURL "/contact/" }}"><i class="fas fa-envelope"></i> {{ i18n "ui.nav_contact" }}</a></li>
+    </ul>
+    <div class="topbar__tools">
+      <span class="lang-switch" data-lang-switch>
+        <button type="button" class="lang-switch__btn" data-lang-switch-btn aria-expanded="false"
+                aria-label="{{ i18n "ui.selectLanguage" }}" title="{{ i18n "ui.selectLanguage" }}">🌐</button>
+        <span class="lang-switch__menu">
+          {{ $pageLang := .Lang }}
+          {{ range .Site.Languages }}
+            {{ $lang := .Lang }}
+            {{ $flag := "gb" }}{{ if eq $lang "hu" }}{{ $flag = "hu" }}{{ end }}
+            {{ $url := printf "/%s/" $lang }}
+            {{ range $.Page.AllTranslations }}
+              {{ if eq .Lang $lang }}{{ $url = .RelPermalink }}{{ end }}
+            {{ end }}
+            <a href="{{ $url }}" hreflang="{{ $lang }}" lang="{{ $lang }}"
+               class="lang-switch__item{{ if eq $lang $pageLang }} is-active{{ end }}">
+              <img src="/assets/flags/{{ $flag }}.svg" alt="" width="18" height="13" loading="lazy">
+              <span>{{ .LanguageName }}</span>
+            </a>
+          {{ end }}
+        </span>
+      </span>
+      <button type="button" id="theme-toggle" class="theme-toggle" aria-pressed="false" aria-label="{{ i18n "ui.themeToggle" }}">☀️</button>
+    </div>
+  </div>
+</nav>

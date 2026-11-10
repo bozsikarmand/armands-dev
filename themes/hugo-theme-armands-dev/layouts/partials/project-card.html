@@ -1,0 +1,22 @@
+{{- $detail := .detail | default false -}}
+<article class="project-card{{ if .featured }} project-card--featured{{ end }}" data-category="{{ .category }}" data-tags="{{ delimit .tags " " | lower }}">
+  <div class="project-card__head">
+    <h3 class="project-card__title">
+      {{ if $detail }}
+        <a href="{{ relLangURL (printf "/projects/%s/" .id) }}">{{ .title }}</a>
+      {{ else }}
+        {{ .title }}
+      {{ end }}
+    </h3>
+    <span class="project-card__badge project-card__badge--{{ .category }}">{{ i18n (printf "ui.cat_%s" .category) }}</span>
+  </div>
+  <p class="project-card__summary">{{ .summary }}</p>
+  <ul class="project-card__tags">
+    {{ range .tags }}<li>{{ . }}</li>{{ end }}
+  </ul>
+  <div class="project-card__links">
+    {{ with .links.repo }}<a href="{{ . }}" target="_blank" rel="noopener"><i class="fab fa-gitlab"></i> {{ i18n "ui.repo" }}</a>{{ end }}
+    {{ with .links.live }}<a href="{{ . }}" target="_blank" rel="noopener"><i class="fas fa-arrow-up-right-from-square"></i> {{ i18n "ui.live" }}</a>{{ end }}
+    {{ if $detail }}<a href="{{ relLangURL (printf "/projects/%s/" .id) }}"><i class="fas fa-circle-info"></i> {{ i18n "ui.details" }}</a>{{ end }}
+  </div>
+</article>

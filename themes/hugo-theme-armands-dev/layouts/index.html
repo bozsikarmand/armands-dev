@@ -1,0 +1,24 @@
+{{ define "main" }}
+{{- $projects := index site.Data site.Language.LanguageCode | default (index site.Data "en") -}}
+{{- $projects = index $projects "projects" -}}
+<div class="introduction">
+  <h1>{{ i18n "ui.greeting" }}</h1>
+  <span class="self-identification">{{ i18n "ui.tagline" }}</span>
+</div>
+<div class="biography">
+  <p>{{ i18n "ui.bio" | safeHTML }}</p>
+</div>
+
+<section class="featured" aria-labelledby="featured-title">
+  <h2 class="section-title" id="featured-title">{{ i18n "ui.featured_title" }}</h2>
+  <div class="project-grid">
+    {{ range where $projects "featured" true }}
+      {{ partial "project-card.html" . }}
+    {{ end }}
+  </div>
+</section>
+
+<section class="categories" aria-label="{{ i18n "ui.categories" }}">
+  <a class="button-cta button-cta--small" href="{{ relLangURL "/projects/" }}"><i class="fas fa-diagram-project"></i> {{ i18n "ui.all_projects" }}</a>
+</section>
+{{ end }}

@@ -1,0 +1,28 @@
+{{ define "main" }}
+{{- $langData := index site.Data site.Language.LanguageCode | default (index site.Data "en") -}}
+{{- $projects := index $langData "projects" -}}
+{{- $id := .File.BaseFileName -}}
+{{- $project := dict -}}
+{{- range $projects -}}
+  {{- if eq .id $id -}}{{- $project = . -}}{{- end -}}
+{{- end -}}
+<article class="project-detail">
+  <p class="project-detail__back"><a href="{{ relLangURL "/projects/" }}"><i class="fas fa-arrow-left"></i> {{ i18n "ui.back_to_projects" }}</a></p>
+  <div class="project-card__head">
+    <h1 class="project-detail__title">{{ $project.title | default .Title }}</h1>
+    {{ with $project.category }}<span class="project-card__badge project-card__badge--{{ . }}">{{ i18n (printf "ui.cat_%s" .) }}</span>{{ end }}
+  </div>
+  {{ with $project.tags }}
+  <ul class="project-card__tags">
+    {{ range . }}<li>{{ . }}</li>{{ end }}
+  </ul>
+  {{ end }}
+  <div class="project-detail__body">
+    {{ .Content }}
+  </div>
+  <div class="project-card__links">
+    {{ with $project.links.repo }}<a href="{{ . }}" target="_blank" rel="noopener"><i class="fab fa-gitlab"></i> {{ i18n "ui.repo" }}</a>{{ end }}
+    {{ with $project.links.live }}<a href="{{ . }}" target="_blank" rel="noopener"><i class="fas fa-arrow-up-right-from-square"></i> {{ i18n "ui.live" }}</a>{{ end }}
+  </div>
+</article>
+{{ end }}
