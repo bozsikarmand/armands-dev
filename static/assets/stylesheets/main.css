@@ -1350,6 +1350,8 @@ input[type="file"] {
 }
 
 /* ============ Portfólió (.dev) ============ */
+/* Vízszintes odébbcsúszás kizárva (classikus scrollbars mellett is) */
+html, body { overflow-x: clip; }
 .site-main { padding: 2rem clamp(0.8rem, 3vw, 1.6rem) 3rem; }
 .wrap { max-width: 960px; margin: 0 auto; }
 .section-title {
