@@ -1418,3 +1418,11 @@ html, body { overflow-x: clip; }
 .project-detail__body h2, .project-detail__body h3 { color: var(--text); margin-top: 1.6rem; }
 .project-detail__body a { color: var(--link); }
 .project-detail .project-card__links { border-top: 1px solid var(--border); padding-top: 1.2rem; }
+
+/* Térközpontosítás: CTA – rács – footer között levegő */
+.featured { margin-bottom: 1.8rem; }
+.categories { margin: 1.8rem 0 2.5rem; }
+.social-media-profiles { margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid var(--border); }
+.footer-links { padding: 1.5rem 0 1rem; }
+.footer-links .wrap { display: block; }
+.footer-links .copyright { opacity: 0.6; margin-top: 0.8rem; }
