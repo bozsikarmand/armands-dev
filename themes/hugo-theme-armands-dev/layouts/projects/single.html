@@ -22,7 +22,7 @@
   </div>
   <div class="project-card__links">
     {{ with $project.links.repo }}<a href="{{ . }}" target="_blank" rel="noopener"><i class="fab fa-gitlab"></i> {{ i18n "ui.repo" }}</a>{{ end }}
-    {{ with $project.links.live }}<a href="{{ . }}" target="_blank" rel="noopener"><i class="fas fa-arrow-up-right-from-square"></i> {{ i18n "ui.live" }}</a>{{ end }}
+    {{ with $project.links.live }}<a href="{{ . }}" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> {{ i18n "ui.live" }}</a>{{ end }}
   </div>
 </article>
 {{ end }}

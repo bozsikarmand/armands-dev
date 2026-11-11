@@ -1362,6 +1362,8 @@ html, body { overflow-x: clip; }
 .button-cta--small {
   width: auto; padding: 10px 28px; font-size: 0.85rem; display: inline-block;
 }
+.biography a.button-cta--small:hover,
+.button-cta--small:hover { padding: 10px 28px; }
 
 /* Projekt-kártyák */
 .project-grid {
