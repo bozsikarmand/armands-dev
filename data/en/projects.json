@@ -3,9 +3,17 @@
     "id": "bar-project",
     "title": "Bar Project",
     "summary": "Interactive 3D bar visualisation built for a computer graphics course — WebGL, custom shaders and procedural geometry.",
-    "tags": ["WebGL", "Three.js", "GLSL", "Computer Graphics"],
+    "tags": [
+      "WebGL",
+      "Three.js",
+      "GLSL",
+      "Computer Graphics"
+    ],
     "category": "software",
-    "links": { "repo": "https://gitlab.com/bozsikarmand", "live": "https://bar.armands.dev" },
+    "links": {
+      "repo": "https://gitlab.com/bozsikarmand",
+      "live": "https://bar.armands.dev"
+    },
     "featured": true,
     "detail": true
   },
@@ -13,9 +21,17 @@
     "id": "personal-sites",
     "title": "Personal site ecosystem",
     "summary": "armands.blog · armands.cv · armands.site — three Hugo sites with a unified Monokai design system, single-source CV data, CI-built PDFs and a shared contact pipeline (Cloudflare Worker + Zoho Mail + Turnstile).",
-    "tags": ["Hugo", "Cloudflare Workers", "GitLab CI", "Design System"],
+    "tags": [
+      "Hugo",
+      "Cloudflare Workers",
+      "GitLab CI",
+      "Design System"
+    ],
     "category": "software",
-    "links": { "repo": "https://gitlab.com/bozsikarmand", "live": "https://armands.site" },
+    "links": {
+      "repo": "https://gitlab.com/bozsikarmand",
+      "live": "https://armands.site"
+    },
     "featured": true,
     "detail": true
   },
@@ -23,9 +39,18 @@
     "id": "homelab-k3s",
     "title": "Homelab Kubernetes cluster",
     "summary": "Self-hosted k3s cluster with GitOps continuous delivery — every service declared in Git, deployed automatically by Argo CD.",
-    "tags": ["k3s", "Kubernetes", "Argo CD", "GitOps", "Homelab"],
+    "tags": [
+      "k3s",
+      "Kubernetes",
+      "Argo CD",
+      "GitOps",
+      "Homelab"
+    ],
     "category": "homelab",
-    "links": { "repo": "", "live": "https://argocd.armands.dev" },
+    "links": {
+      "repo": "",
+      "live": ""
+    },
     "featured": false,
     "detail": false
   },
@@ -33,9 +58,17 @@
     "id": "selfhosted-gitlab",
     "title": "Self-hosted GitLab",
     "summary": "Private GitLab instance running the family's repositories, CI runners and container registry — independent of external SaaS.",
-    "tags": ["GitLab", "CI/CD", "Docker", "Self-hosting"],
+    "tags": [
+      "GitLab",
+      "CI/CD",
+      "Docker",
+      "Self-hosting"
+    ],
     "category": "homelab",
-    "links": { "repo": "", "live": "https://git.armands.dev" },
+    "links": {
+      "repo": "",
+      "live": ""
+    },
     "featured": false,
     "detail": false
   },
@@ -43,9 +76,17 @@
     "id": "cloudflare-tunnels",
     "title": "Cloudflare Tunnel ingress",
     "summary": "All homelab services exposed securely through Cloudflare Tunnels — no open ports, no public IP exposure, Access policies on top.",
-    "tags": ["Cloudflare", "Zero Trust", "Networking", "Security"],
+    "tags": [
+      "Cloudflare",
+      "Zero Trust",
+      "Networking",
+      "Security"
+    ],
     "category": "homelab",
-    "links": { "repo": "", "live": "" },
+    "links": {
+      "repo": "",
+      "live": ""
+    },
     "featured": false,
     "detail": false
   }
