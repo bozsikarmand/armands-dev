@@ -1424,7 +1424,7 @@ html, body { overflow-x: clip; }
 /* Térközpontosítás: CTA – rács – footer között levegő */
 .featured { margin-bottom: 1.8rem; }
 .categories { margin: 1.8rem 0 2.5rem; }
-.social-media-profiles { margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid var(--border); }
+.social-media-profiles { margin-top: 2.5rem; }
 .footer-links { padding: 1.5rem 0 1rem; }
 .footer-links .wrap { display: block; }
 .footer-links .copyright { opacity: 0.6; margin-top: 0.8rem; }
