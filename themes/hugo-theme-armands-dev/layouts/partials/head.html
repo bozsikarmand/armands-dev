@@ -1,16 +1,16 @@
 <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 <title>{{ .Title }}</title>
-<meta name="description" content="{{ .Description }}"/>
+<meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ site.Params.description }}{{ end }}"/>
 <meta name="robots" content="index, follow"/>
 <meta name="referrer" content="always"/>
 <meta name="theme-color" content="#000000"/>
 <meta property="og:title" content="Armand Viktor Bozsik"/>
-<meta property="og:description" content="{{ .Description }}"/>
+<meta property="og:description" content="{{ with .Description }}{{ . }}{{ else }}{{ site.Params.description }}{{ end }}"/>
 <meta property="og:image" content="https://armands.site/assets/images/main.jpg">
 <meta property="og:url" content="{{ .Permalink }}"/>
 <meta name="twitter:title" content="Armand Viktor Bozsik">
-<meta name="twitter:description" content="Armand Viktor Bozsik"/>
+<meta name="twitter:description" content="{{ with .Description }}{{ . }}{{ else }}{{ site.Params.description }}{{ end }}"/>
 <meta name="twitter:image" content="https://armands.site/assets/images/main.jpg"/>
 <meta name="twitter:site" content="@bozsikarmand">
 <meta name="twitter:creator" content="@bozsikarmand">
@@ -24,6 +24,9 @@
 <link rel='stylesheet' href='/assets/fonts/fontawesome/stylesheets/all.min.css' type='text/css' media='screen'/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
 <script src="/assets/scripts/theme-init.js"></script>
+{{ with site.Params.cfBeaconToken }}
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "{{ . }}"}'></script>
+{{ end }}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
