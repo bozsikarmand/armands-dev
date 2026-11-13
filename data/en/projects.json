@@ -36,6 +36,22 @@
     "detail": true
   },
   {
+    "id": "neumann-archive",
+    "title": "Neumann archive",
+    "summary": "The 2013–14 IKEA “At Home in the Forest” competition site, resurrected: a WordPress 3.8.5 + WPML install frozen into a fully static, maintenance-free archive — original design pixel-for-pixel, galleries, quizzes, panoramas and a frozen Twitter feed all working.",
+    "tags": [
+      "Cloudflare Pages",
+      "Static Archive",
+      "WordPress",
+      "Docker"
+    ],
+    "category": "software",
+    "links": {
+      "live": "https://neumann-armands-dev.cf-584.workers.dev"
+    },
+    "detail": true
+  },
+  {
     "id": "homelab-k3s",
     "title": "Homelab Kubernetes cluster",
     "summary": "Self-hosted k3s cluster with GitOps continuous delivery — every service declared in Git, deployed automatically by Argo CD.",

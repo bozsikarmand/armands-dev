@@ -36,6 +36,22 @@
     "detail": true
   },
   {
+    "id": "neumann-archive",
+    "title": "Neumann-archívum",
+    "summary": "A 2013–14-es IKEA „Otthon az erdőben” pályázati oldal feltámasztva: a WordPress 3.8.5 + WPML rendszer teljesen statikus, karbantartásmentes archívummá fagyasztva – az eredeti dizájn pixelre, galériákkal, kvízekkel, panorámákkal és befagyasztott Twitter-feeddel.",
+    "tags": [
+      "Cloudflare Pages",
+      "Static Archive",
+      "WordPress",
+      "Docker"
+    ],
+    "category": "software",
+    "links": {
+      "live": "https://neumann-armands-dev.cf-584.workers.dev"
+    },
+    "detail": true
+  },
+  {
     "id": "homelab-k3s",
     "title": "Homelab Kubernetes cluster",
     "summary": "Saját üzemeltetésű k3s klaszter GitOps folyamatos szállítással — minden szolgáltatás Gitben deklarálva, Argo CD automatikusan telepíti.",
