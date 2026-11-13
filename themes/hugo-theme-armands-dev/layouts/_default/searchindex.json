@@ -1,0 +1,5 @@
+{{ $index := slice }}
+{{ range where .Site.RegularPages "Kind" "page" }}
+  {{ $index = $index | append (dict "title" .Title "uri" .RelPermalink "content" (.Plain | truncate 300)) }}
+{{ end }}
+{{ $index | jsonify }}

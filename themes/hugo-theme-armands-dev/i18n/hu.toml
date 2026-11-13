@@ -56,3 +56,5 @@ nav_site = "Site"
 
 notFound = "A keresett oldal nem létezik."
 notFoundHome = "Vissza a főoldalra"
+
+searchPlaceholder = "Keresés a projektekben…"

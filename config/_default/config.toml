@@ -7,7 +7,13 @@ enableRobotsTXT = true
 disableKinds = ["taxonomy", "term", "RSS"]
 
 [outputs]
-  home = ["HTML"]
+  home = ["HTML", "SearchIndex"]
+
+[outputFormats]
+  [outputFormats.SearchIndex]
+    mediaType = "application/json"
+    baseName = "searchindex"
+    isPlainText = true
 
 [params]
   description = "Projects and homelab of Armand Viktor Bozsik — software developer."
