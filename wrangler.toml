@@ -1,10 +1,11 @@
 name = "armands-dev"
+main = "worker.js"
 compatibility_date = "2026-11-08"
 
 [assets]
 directory = "public"
-# Ismeretlen útvonalnál a /404.html-t szolgálja ki 404-es státusszal (ne üres válasz legyen)
-not_found_handling = "404-page"
+# A 404-kezelést a worker.js végzi (Accept-Language alapján tematikus, keresős oldal)
+not_found_handling = "none"
 
 [observability.logs]
 enabled = true
