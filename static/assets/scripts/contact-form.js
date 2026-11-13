@@ -1,4 +1,4 @@
-// Kapcsolati form – POST /api/contact (azon a Workeren) → Zoho Mail (hello@armands.site) → armand@bozsik.eu
+// Kapcsolati form – POST https://armands.site/api/contact (ugyanaz a Worker-végpont, mint a CV/blog) → Zoho Mail
 document.addEventListener('DOMContentLoaded', () => {
   const form = document.getElementById('site-contact-form');
   if (!form) return;
@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
     try {
-      const response = await fetch('/api/contact', {
+      const response = await fetch('https://armands.site/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data),

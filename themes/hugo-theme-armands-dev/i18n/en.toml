@@ -1,4 +1,5 @@
 [ui]
+skipToContent = "Skip to main content"
 nav_home = "Home"
 nav_blog = "Blog"
 nav_projects = "Projects"
@@ -51,3 +52,7 @@ filter_all = "All"
 filter_empty = "No projects in this category."
 back_to_projects = "Back to projects"
 nav_site = "Site"
+
+
+notFound = "The page you are looking for does not exist."
+notFoundHome = "Back to home"

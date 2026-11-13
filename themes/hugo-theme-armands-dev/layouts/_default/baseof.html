@@ -4,8 +4,9 @@
   {{ partial "head.html" . }}
 </head>
 <body class="page-portfolio">
+  <a class="skip-link" href="#site-main">{{ i18n "ui.skipToContent" | default "Skip to main content" }}</a>
   {{ partial "nav.html" . }}
-  <main class="site-main">
+  <main class="site-main" id="site-main">
     <div class="wrap">
       {{ block "main" . }}{{ end }}
       {{ partial "social.html" . }}
@@ -13,5 +14,23 @@
   </main>
   {{ partial "footer.html" . }}
   {{ block "scripts" . }}{{ end }}
+<script>
+// Vissza az oldal tetejére
+(function () {
+  var btn = document.createElement('button');
+  btn.type = 'button';
+  btn.className = 'to-top';
+  btn.setAttribute('aria-label', 'Back to top');
+  btn.textContent = '↑';
+  document.body.appendChild(btn);
+  btn.addEventListener('click', function () {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+  window.addEventListener('scroll', function () {
+    btn.classList.toggle('is-visible', window.scrollY > 300);
+  }, { passive: true });
+})();
+</script>
+
 </body>
 </html>

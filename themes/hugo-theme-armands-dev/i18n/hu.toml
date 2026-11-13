@@ -1,4 +1,5 @@
 [ui]
+skipToContent = "Ugrás a főtartalomra"
 nav_home = "Főoldal"
 nav_blog = "Blog"
 nav_projects = "Projektek"
@@ -51,3 +52,7 @@ filter_all = "Mind"
 filter_empty = "Nincs projekt ebben a kategóriában."
 back_to_projects = "Vissza a projektekhez"
 nav_site = "Site"
+
+
+notFound = "A keresett oldal nem létezik."
+notFoundHome = "Vissza a főoldalra"
