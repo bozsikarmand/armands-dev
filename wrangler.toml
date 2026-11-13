@@ -3,6 +3,8 @@ compatibility_date = "2026-11-08"
 
 [assets]
 directory = "public"
+# Ismeretlen útvonalnál a /404.html-t szolgálja ki 404-es státusszal (ne üres válasz legyen)
+not_found_handling = "404-page"
 
 [observability.logs]
 enabled = true
