@@ -1,5 +1,5 @@
 {{ define "main" }}
-{{- $projects := index site.Data site.Language.LanguageCode | default (index site.Data "en") -}}
+{{- $projects := index site.Data site.Language.Lang | default (index site.Data "en") -}}
 {{- $projects = index $projects "projects" -}}
 <div class="introduction">
   <h1>{{ i18n "ui.greeting" }}</h1>

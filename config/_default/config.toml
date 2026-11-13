@@ -17,3 +17,16 @@ disableKinds = ["taxonomy", "term", "RSS"]
 
 [params]
   description = "Projects and homelab of Armand Viktor Bozsik — software developer."
+
+[module]
+  [[module.mounts]]
+    source = "content/en"
+    target = "content"
+    lang = "en"
+  [[module.mounts]]
+    source = "content/hu"
+    target = "content"
+    lang = "hu"
+  [[module.mounts]]
+    source = "static"
+    target = "static"
