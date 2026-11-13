@@ -20,4 +20,4 @@ url: /hu/projects/neumann-archive/
 
 Cloudflare Pages szolgáltatja, így örökre ingyen elérhető marad. Az űrlapjai ugyanazt a kapcsolati Worker + Turnstile-csővezetéket használják, mint ennek az ökoszisztémának a többi oldala.
 
-**Élőben:** [neumann.armands.dev](https://neumann-armands-dev.cf-584.workers.dev)
+**Élőben:** [neumann.armands.dev](https://neumann.armands.dev)

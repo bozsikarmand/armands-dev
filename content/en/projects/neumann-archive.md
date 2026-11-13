@@ -20,4 +20,4 @@ In 2013–14 our school team entered the IKEA "At Home in the Forest" competitio
 
 Served from Cloudflare Pages, so it stays online for free. Its forms use the same contact Worker + Turnstile pipeline as the rest of this ecosystem.
 
-**Live:** [neumann.armands.dev](https://neumann-armands-dev.cf-584.workers.dev)
+**Live:** [neumann.armands.dev](https://neumann.armands.dev)
