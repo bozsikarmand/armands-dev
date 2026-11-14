@@ -14,23 +14,6 @@
   </main>
   {{ partial "footer.html" . }}
   {{ block "scripts" . }}{{ end }}
-<script>
-// Vissza az oldal tetejére
-(function () {
-  var btn = document.createElement('button');
-  btn.type = 'button';
-  btn.className = 'to-top';
-  btn.setAttribute('aria-label', 'Back to top');
-  btn.textContent = '↑';
-  document.body.appendChild(btn);
-  btn.addEventListener('click', function () {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  });
-  window.addEventListener('scroll', function () {
-    btn.classList.toggle('is-visible', window.scrollY > 150);
-  }, { passive: true });
-})();
-</script>
-
+<script src="{{ "assets/scripts/to-top.js" | relURL }}" defer></script>
 </body>
 </html>

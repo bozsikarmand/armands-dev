@@ -8542,3 +8542,5 @@ const mockup = buildDeviceMockup(document.getElementById('mockup-phone'), {
   "interactive": false
 });
 window.addEventListener('pagehide', () => mockup.destroy(), { once: true });
+
+//# sourceMappingURL=mockup-phone.js.map

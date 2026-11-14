@@ -8552,3 +8552,5 @@ const mockup = buildDeviceMockup(document.getElementById('mockup-laptop'), {
   "interactive": false
 });
 window.addEventListener('pagehide', () => mockup.destroy(), { once: true });
+
+//# sourceMappingURL=mockup-laptop.js.map
