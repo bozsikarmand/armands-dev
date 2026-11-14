@@ -10,7 +10,7 @@
 </div>
 
 <section class="featured" aria-labelledby="featured-title">
-  <h2 class="section-title" id="featured-title">{{ i18n "ui.featured_title" }}</h2>
+  <h2 class="section-title au-section-title" id="featured-title">{{ i18n "ui.featured_title" }}</h2>
   <div class="project-grid">
     {{ range where $projects "featured" true }}
       {{ partial "project-card.html" . }}

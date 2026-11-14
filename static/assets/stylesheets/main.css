@@ -1248,9 +1248,9 @@ html, body { overflow-x: clip; }
 .site-main { padding: 2rem clamp(0.8rem, 3vw, 1.6rem) 3rem; }
 .wrap { width: min(calc(100% - 2rem), var(--au-container)); margin-inline: auto; }
 .section-title {
-  font-size: 1.3rem; font-weight: 600; color: var(--text);
-  margin: 2.5rem 0 1.2rem; padding-bottom: 0.5rem;
-  border-bottom: 1px solid var(--border);
+  /* armands-ui .au-section-title-ra épül; dev-extrák: */
+  margin: 2.5rem 0 1.2rem;
+  padding-bottom: 0.5rem;
 }
 .button-cta--small {
   width: auto; padding: 10px 28px; font-size: 0.85rem; display: inline-block;
