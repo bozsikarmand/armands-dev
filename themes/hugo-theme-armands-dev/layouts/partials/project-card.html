@@ -16,7 +16,7 @@
   </ul>
   <div class="project-card__links">
     {{ with .links.repo }}<a href="{{ . }}" target="_blank" rel="noopener"><i class="fab fa-gitlab"></i> {{ i18n "ui.repo" }}</a>{{ end }}
-    {{ with .links.live }}<a href="{{ . }}" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> {{ i18n "ui.live" }}</a>{{ end }}
-    {{ if $detail }}<a href="{{ relLangURL (printf "/projects/%s/" .id) }}"><i class="fas fa-info-circle"></i> {{ i18n "ui.details" }}</a>{{ end }}
+    {{ with .links.live }}<a href="{{ . }}" target="_blank" rel="noopener">{{ partial "icon.html" "open-new-window" }} {{ i18n "ui.live" }}</a>{{ end }}
+    {{ if $detail }}<a href="{{ relLangURL (printf "/projects/%s/" .id) }}">{{ partial "icon.html" "info-circle" }} {{ i18n "ui.details" }}</a>{{ end }}
   </div>
 </article>

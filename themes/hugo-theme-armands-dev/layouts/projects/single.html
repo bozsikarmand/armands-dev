@@ -7,7 +7,7 @@
   {{- if eq .id $id -}}{{- $project = . -}}{{- end -}}
 {{- end -}}
 <article class="project-detail">
-  <p class="project-detail__back"><a href="{{ relLangURL "/projects/" }}"><i class="fas fa-arrow-left"></i> {{ i18n "ui.back_to_projects" }}</a></p>
+  <p class="project-detail__back"><a href="{{ relLangURL "/projects/" }}">{{ partial "icon.html" "arrow-left" }} {{ i18n "ui.back_to_projects" }}</a></p>
   <div class="project-card__head">
     <h1 class="project-detail__title">{{ $project.title | default .Title }}</h1>
     {{ with $project.category }}<span class="project-card__badge project-card__badge--{{ . }}">{{ i18n (printf "ui.cat_%s" .) }}</span>{{ end }}
