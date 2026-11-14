@@ -1394,10 +1394,7 @@ html, body { overflow-x: clip; }
 .project-card__badge--homelab { background: transparent; color: var(--accent); border: 1px solid var(--accent); }
 .project-card__summary { color: var(--muted); font-size: 0.92rem; line-height: 1.55; margin: 0; flex: 1; }
 .project-card__tags { display: flex; flex-wrap: wrap; gap: 6px; list-style: none; margin: 0; padding: 0; }
-.project-card__tags li {
-  font-size: 0.72rem; color: var(--muted); background: var(--bg);
-  border: 1px solid var(--border); border-radius: 4px; padding: 2px 8px;
-}
+
 .project-card__links { display: flex; flex-wrap: wrap; gap: 1rem; padding-top: 0.4rem; }
 .project-card__links a {
   color: var(--muted); font-size: 0.85rem; font-weight: 600; text-decoration: none;

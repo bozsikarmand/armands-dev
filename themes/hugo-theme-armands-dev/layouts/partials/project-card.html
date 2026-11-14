@@ -12,7 +12,7 @@
   </div>
   <p class="project-card__summary">{{ .summary }}</p>
   <ul class="project-card__tags">
-    {{ range .tags }}<li>{{ . }}</li>{{ end }}
+    {{ range .tags }}<li class="au-tag">{{ . }}</li>{{ end }}
   </ul>
   <div class="project-card__links">
     {{ with .links.repo }}<a href="{{ . }}" target="_blank" rel="noopener"><i class="fab fa-gitlab"></i> {{ i18n "ui.repo" }}</a>{{ end }}
