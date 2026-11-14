@@ -411,27 +411,6 @@ body.page-landing p {
   transition-duration: 0.1s;
 }
 
-.copyright {
-  /* kontraszt (WCAG): a 0.4-es opacity a sötét témában alig látszott */
-  color: var(--muted);
-}
-
-.copyright a:hover {
-  color: var(--accent);
-  opacity: 1;
-}
-
-.copyright p {
-  /* direkt szín: a régi `p { color: var(--bg-alt) }` (lentebb) felülírná az öröklöttet */
-  color: var(--muted);
-  font-size: 12px;
-  line-height: 14px;
-}
-
-.copyright p a {
-  color: var(--muted);
-}
-
 
 .button-cta {
   /* armands-ui v0.3 .au-pill--bordered-ra épül; dev-extrák: */
@@ -1111,9 +1090,6 @@ input[type="file"] {
 }
 
 /* Topbar: a tartalomsáv tetején (asztali), mobilon off-canvas panel */
-/* .topbar alapok: armands-ui v0.6 .au-topbar */
-.au-topbar__tools { display: flex; align-items: center; gap: 0.6rem; }
-.au-topbar .theme-toggle { margin-left: 0; }
 
 /* ============ Portfólió (.dev) ============ */
 /* Vízszintes odébbcsúszás kizárva (classikus scrollbars mellett is) */
@@ -1193,45 +1169,8 @@ html, body { overflow-x: clip; }
 /* kontraszt (WCAG): explicit --muted, ne opacity-csökkentés */
 .footer-links .copyright { color: var(--muted); margin-top: 0.8rem; }
 
-/* Skip-link: tabbal navigálva az első fókusz ugrál a főtartalomra (WCAG 2.4.1) */
-.skip-link {
-  position: absolute;
-  left: -9999px;
-  top: 0;
-  z-index: 100;
-  background: var(--accent);
-  color: var(--accent-text);
-  padding: 0.6rem 1rem;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
-  border-radius: 0 0 6px 0;
-}
-.skip-link:focus {
-  left: 0;
-}
 
 /* Vissza az oldal tetejére gomb */
-.to-top {
-  position: fixed;
-  right: 1.2rem;
-  bottom: 1.2rem;
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  border: 1px solid var(--border);
-  background: var(--bg-alt, #2d2a2e);
-  color: var(--accent);
-  font-size: 1.3rem;
-  cursor: pointer;
-  z-index: 50;
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(8px);
-  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
-}
-.to-top.is-visible { opacity: 0.9; visibility: visible; transform: translateY(0); }
-.to-top:hover { opacity: 1; border-color: var(--accent); }
-@media (prefers-reduced-motion: reduce) { .to-top { transition: none; } }
 
 /* ---- HorizonX device mockup showcase (personal-sites részletes oldal) ---- */
 /* A .dmk-* váz a HorizonX laptop/phone-mockup export stage-struktúrája. */

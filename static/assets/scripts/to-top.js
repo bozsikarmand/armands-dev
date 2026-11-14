@@ -2,7 +2,7 @@
 (function () {
   var btn = document.createElement('button');
   btn.type = 'button';
-  btn.className = 'to-top';
+  btn.className = 'au-to-top';
   btn.setAttribute('aria-label', 'Back to top');
   btn.textContent = '↑';
   document.body.appendChild(btn);
