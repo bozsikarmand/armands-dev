@@ -1110,8 +1110,6 @@ input[type="file"] {
 /* .topbar alapok: armands-ui v0.6 .au-topbar */
 .au-topbar__tools { display: flex; align-items: center; gap: 0.6rem; }
 .au-topbar .theme-toggle { margin-left: 0; }
-.menu-fab, .menu-backdrop { display: none; }
-
 /* 801–1400px között a brand elrejtve: a név úgyis kiemelten szerepel a tartalomban */
 @media only screen and (min-width: 801px) and (max-width: 1400px) {
   .au-topbar__brand { display: none; }
