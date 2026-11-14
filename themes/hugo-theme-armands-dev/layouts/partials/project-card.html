@@ -1,5 +1,5 @@
 {{- $detail := .detail | default false -}}
-<article class="project-card{{ if .featured }} project-card--featured{{ end }}" data-category="{{ .category }}" data-tags="{{ delimit .tags " " | lower }}">
+<article class="project-card au-card au-card--hover{{ if .featured }} project-card--featured{{ end }}" data-category="{{ .category }}" data-tags="{{ delimit .tags " " | lower }}">
   <div class="project-card__head">
     <h3 class="project-card__title">
       {{ if $detail }}
