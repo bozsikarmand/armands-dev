@@ -889,75 +889,22 @@ picture img {
 /* Contact form button */
 
 .button-contact-submit {
-  background-color: var(--accent);
-  border: 6px solid var(--accent);
-  display: inline-block;
-  cursor: pointer;
-  color: var(--accent-text);
+  /* armands-ui v0.3 .au-pill--bordered-ra épül (a 0.35em itt pont 6px @17px);
+     dev-extrák: */
+  width: 100%;
+  padding: 16px 76px;
   font-family: 'Montserrat', sans-serif;
   font-size: 17px;
   text-transform: uppercase;
-  padding: 16px 76px;
-  width: 100%;
-  text-align: center;
-  text-decoration: none;
-  border-radius: 42px;
-  -moz-border-radius: 42px;
-  -webkit-border-radius: 42px;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
 }
-
-.button-contact-submit:hover {
-  border-radius: 42px;
-  -moz-border-radius: 42px;
-  -webkit-border-radius: 42px;
-  background-color: transparent;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  border: 6px solid var(--accent);
-  padding: 16px 76px;
-  text-transform: uppercase
-}
-
-.button-contact-submit:active {
-  outline: none;
-  position: relative;
-  top: 4px;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  text-transform: uppercase
-}
-
-.button-contact-submit:focus {
-  outline: none;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  text-transform: uppercase
-}
+.button-contact-submit:hover { background-color: transparent; }
+.button-contact-submit:active { position: relative; top: 4px; }
+.button-contact-submit:focus { outline: none; }
 
 .form-contact label:before {
   content: '\A';
   white-space: pre;
 }
-
-.form-contact input {
-  font-family: "Lora", sans-serif;
-  outline: 0;
-  background: var(--input-bg);
-  color: var(--input-text);
-  width: 100%;
-  border: 0;
-  margin: 0 0 15px;
-  padding: 15px;
-  box-sizing: border-box;
-  font-size: 14px;
-}
-
 
 /*Contact form*/
 
@@ -1014,35 +961,6 @@ picture img {
   opacity: 0;
   cursor: pointer;
 }
-
-#message {
-  font-family: "Lora", sans-serif;
-  outline: 0;
-  background: var(--input-bg);
-  color: var(--muted);
-  width: 100%;
-  height: 200px;
-  border: 0;
-  margin: 0 0 15px;
-  padding: 15px;
-  box-sizing: border-box;
-  font-size: 14px;
-  resize: none;
-}
-
-#topics {
-  font-family: "Lora", sans-serif;
-  outline: 0;
-  background: var(--input-bg);
-  color: var(--muted);
-  width: 100%;
-  border: 0;
-  margin: 0 0 15px;
-  padding: 15px;
-  box-sizing: border-box;
-  font-size: 14px;
-}
-
 
 /* Hide ReCaptcha badge */
 
