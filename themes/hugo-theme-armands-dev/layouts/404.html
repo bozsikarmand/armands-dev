@@ -20,12 +20,17 @@
 </section>
 <style>
   .search-404__results a {
-    display: block;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
     padding: 0.55rem 0.9rem;
     color: var(--accent);
     text-decoration: none;
   }
-  .search-404__results a:hover { background: var(--input-bg); }
+  .search-404__results a:hover,
+  .search-404__results a.is-active { background: var(--input-bg); }
+  .search-404__results .result-item { flex: 1; }
+  .search-404__results .au-search__hint { margin-top: 0; }
 </style>
 <script src="{{ "assets/js/fuse.min.js" | relURL }}" defer></script>
 <script src="{{ "assets/scripts/404-search.js" | relURL }}" defer></script>
