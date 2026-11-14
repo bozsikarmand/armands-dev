@@ -1,3 +1,7 @@
+@import url('armands-ui.css');
+
+/* Ez a fájl az oldalspecifikus stílus; a token-séma és a
+   primitívek szerződése: armands-ui.css fejléce. Színek csak tokenekben. */
 :root {
   /* armands.blog _dark.scss tokenjei – pontosan */
   --bg: #2D2A2E;                        /* body-background-color */
@@ -1354,7 +1358,7 @@ input[type="file"] {
 /* Vízszintes odébbcsúszás kizárva (classikus scrollbars mellett is) */
 html, body { overflow-x: clip; }
 .site-main { padding: 2rem clamp(0.8rem, 3vw, 1.6rem) 3rem; }
-.wrap { max-width: 960px; margin: 0 auto; }
+.wrap { width: min(100% - 2rem, var(--au-container)); margin-inline: auto; }
 .section-title {
   font-size: 1.3rem; font-weight: 600; color: var(--text);
   margin: 2.5rem 0 1.2rem; padding-bottom: 0.5rem;
@@ -1369,7 +1373,7 @@ html, body { overflow-x: clip; }
 /* Projekt-kártyák */
 .project-grid {
   display: grid; gap: 1.2rem;
-  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 290px), 1fr));
 }
 .project-card {
   background: var(--bg-alt); border: 1px solid var(--border); border-radius: 8px;
