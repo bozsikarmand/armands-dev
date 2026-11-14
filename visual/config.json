@@ -1,0 +1,65 @@
+{
+  "hugo": "/tmp/opencode/hugo",
+  "hugoArgs": [
+    "--destination",
+    "public-visual",
+    "--baseURL",
+    "http://127.0.0.1:8791"
+  ],
+  "serveDir": "public-visual",
+  "sizes": [
+    390,
+    768,
+    1280,
+    1920
+  ],
+  "themes": [
+    "dark",
+    "monolight"
+  ],
+  "themeStorage": {
+    "dev": [
+      "theme",
+      null
+    ],
+    "site": [
+      "theme",
+      null
+    ],
+    "cv": [
+      "theme",
+      null
+    ],
+    "blog": [
+      "theme",
+      null
+    ]
+  },
+  "pages": [
+    {
+      "name": "home-en",
+      "path": "/en/"
+    },
+    {
+      "name": "home-hu",
+      "path": "/hu/"
+    },
+    {
+      "name": "projects-en",
+      "path": "/en/projects/"
+    },
+    {
+      "name": "project-detail-en",
+      "path": "/en/projects/personal-sites/"
+    },
+    {
+      "name": "contact-en",
+      "path": "/en/contact/"
+    },
+    {
+      "name": "404-en",
+      "path": "/en/404.html"
+    }
+  ],
+  "chromiumPath": "/home/abozsik/.cache/ms-playwright/chromium-1254/chrome-linux64/chrome"
+}

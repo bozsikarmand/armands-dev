@@ -1,2 +1,4 @@
 public/
 .hugo_build.lock
+public-visual/
+node_modules/
