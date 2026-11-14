@@ -1267,3 +1267,40 @@ html, body { overflow-x: clip; }
 .to-top.is-visible { opacity: 0.9; visibility: visible; transform: translateY(0); }
 .to-top:hover { opacity: 1; border-color: var(--accent); }
 @media (prefers-reduced-motion: reduce) { .to-top { transition: none; } }
+
+/* ---- HorizonX device mockup showcase (personal-sites részletes oldal) ---- */
+/* A .dmk-* váz a HorizonX laptop/phone-mockup export stage-struktúrája. */
+.ecosystem-showcase { margin-top: var(--au-flow, 2rem); }
+.ecosystem-showcase__grid {
+  display: flex; flex-wrap: wrap; gap: 2rem; align-items: flex-end; justify-content: center;
+}
+.ecosystem-showcase__item {
+  display: flex; flex-direction: column; align-items: center; gap: 0.6rem;
+  text-decoration: none;
+}
+.ecosystem-showcase__item--laptop { flex: 1 1 420px; max-width: 560px; }
+.ecosystem-showcase__item--phone { flex: 0 1 220px; }
+.ecosystem-showcase__label {
+  font-size: 0.8rem; letter-spacing: 0.08em; color: var(--muted);
+}
+.ecosystem-showcase__item:hover .ecosystem-showcase__label { color: var(--link-hover); }
+
+.dmk-frame {
+  display: flex; align-items: center; justify-content: center;
+  width: 100%; overflow: hidden;
+}
+.dmk-viewport {
+  position: relative; box-sizing: border-box; flex: 0 0 auto;
+  width: var(--dmk-viewport-width); max-width: 100%;
+  height: var(--dmk-viewport-height); max-height: 70vh;
+  overflow: hidden; border-radius: var(--dmk-radius, 0);
+  background: var(--dmk-background, transparent);
+  isolation: isolate;
+}
+.dmk-stage { position: absolute; inset: 0; cursor: grab; }
+.dmk-stage:active { cursor: grabbing; }
+.dmk-stage > canvas { display: block; width: 100%; height: 100%; }
+/* progresszív háttér: a stage betöltése előtt a screenshot látszik */
+.dmk-stage--laptop { background: url('/assets/mockups/dev-laptop.webp') center/cover no-repeat; }
+.dmk-stage--phone { background: url('/assets/mockups/blog-phone.webp') center/cover no-repeat; }
+.dmk-stage.canvas-ready { background: none; }

@@ -20,6 +20,30 @@
   <div class="project-detail__body">
     {{ .Content }}
   </div>
+  {{ if eq $id "personal-sites" }}
+  <section class="ecosystem-showcase" aria-label="Site previews">
+    <h2 class="au-section-title">{{ i18n "ui.showcase_title" | default "The system, live" }}</h2>
+    <div class="ecosystem-showcase__grid">
+      <a class="ecosystem-showcase__item ecosystem-showcase__item--laptop" href="https://armands.dev/en/" target="_blank" rel="noopener">
+        <div class="dmk-frame">
+          <div class="dmk-viewport" style="--dmk-viewport-width:1280px;--dmk-viewport-height:960px;--dmk-radius:12px;--dmk-background:transparent" role="img" aria-label="armands.dev 3D laptop mockup">
+            <div class="dmk-stage dmk-stage--laptop" id="mockup-laptop" data-mockup-load="laptop"></div>
+          </div>
+        </div>
+        <span class="ecosystem-showcase__label">armands.dev</span>
+      </a>
+      <a class="ecosystem-showcase__item ecosystem-showcase__item--phone" href="https://armands.blog/" target="_blank" rel="noopener">
+        <div class="dmk-frame">
+          <div class="dmk-viewport" style="--dmk-viewport-width:1080px;--dmk-viewport-height:1350px;--dmk-radius:12px;--dmk-background:transparent" role="img" aria-label="armands.blog 3D phone mockup">
+            <div class="dmk-stage dmk-stage--phone" id="mockup-phone" data-mockup-load="phone"></div>
+          </div>
+        </div>
+        <span class="ecosystem-showcase__label">armands.blog</span>
+      </a>
+    </div>
+  </section>
+  <script src="{{ "assets/scripts/mockup-loader.js" | relURL }}" defer></script>
+  {{ end }}
   <div class="project-card__links">
     {{ with $project.links.repo }}<a href="{{ . }}" target="_blank" rel="noopener"><i class="fab fa-gitlab"></i> {{ i18n "ui.repo" }}</a>{{ end }}
     {{ with $project.links.live }}<a href="{{ . }}" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> {{ i18n "ui.live" }}</a>{{ end }}
