@@ -1358,7 +1358,7 @@ input[type="file"] {
 /* Vízszintes odébbcsúszás kizárva (classikus scrollbars mellett is) */
 html, body { overflow-x: clip; }
 .site-main { padding: 2rem clamp(0.8rem, 3vw, 1.6rem) 3rem; }
-.wrap { width: min(100% - 2rem, var(--au-container)); margin-inline: auto; }
+.wrap { width: min(calc(100% - 2rem), var(--au-container)); margin-inline: auto; }
 .section-title {
   font-size: 1.3rem; font-weight: 600; color: var(--text);
   margin: 2.5rem 0 1.2rem; padding-bottom: 0.5rem;
