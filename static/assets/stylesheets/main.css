@@ -1304,3 +1304,18 @@ html, body { overflow-x: clip; }
 .dmk-stage--laptop { background: url('/assets/mockups/dev-laptop.webp') center/cover no-repeat; }
 .dmk-stage--phone { background: url('/assets/mockups/blog-phone.webp') center/cover no-repeat; }
 .dmk-stage.canvas-ready { background: none; }
+
+/* kattintásra töltődő 3D mockup overlay-gomb */
+.dmk-load {
+  position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);
+  z-index: 2; display: inline-flex; align-items: center; gap: 0.45rem;
+  padding: 0.55rem 1.1rem; border-radius: 999px;
+  border: 1px solid var(--border); background: var(--overlay-bg-strong, rgba(33, 33, 33, 0.85));
+  color: var(--text); font: inherit; font-size: 0.85rem; letter-spacing: 0.05em;
+  cursor: pointer; opacity: 0.92; transition: opacity 0.15s ease, border-color 0.15s ease;
+}
+.dmk-load:hover, .dmk-load:focus-visible { opacity: 1; border-color: var(--accent); }
+.dmk-load__icon { font-size: 0.7rem; color: var(--accent); }
+.dmk-load.is-loading { opacity: 0.6; pointer-events: none; }
+.dmk-stage.canvas-ready .dmk-load { display: none; }
+@media (prefers-reduced-motion: reduce) { .dmk-load { transition: none; } }

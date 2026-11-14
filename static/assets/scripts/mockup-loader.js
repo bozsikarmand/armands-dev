@@ -1,30 +1,26 @@
 // HorizonX mockup bootstrap: a 3D mockup-ok (mockup-laptop.js / mockup-phone.js,
-// egyenként ~1–1,5 MB) csak akkor töltődnek, amikor a stage bekerül a viewportba.
+// egyenként ~1 MB) kattintásra töltődnek — az oldal TTI-je így érintetlen marad.
 // CSP-barát: dinamikus import 'self' forrásból, inline JS nélkül.
 (function () {
-  var stages = document.querySelectorAll('[data-mockup-load]');
-  if (!stages.length) return;
+  var buttons = document.querySelectorAll('[data-mockup-load]');
+  if (!buttons.length) return;
 
-  function load(el) {
-    var which = el.getAttribute('data-mockup-load');
-    el.removeAttribute('data-mockup-load');
-    import('/assets/scripts/mockup-' + which + '.js').catch(function () {});
-  }
-
-  if (!('IntersectionObserver' in window)) {
-    Array.prototype.forEach.call(stages, load);
-    return;
-  }
-  var io = new IntersectionObserver(function (entries) {
-    Array.prototype.forEach.call(entries, function (e) {
-      if (e.isIntersecting) { io.unobserve(e.target); load(e.target); }
+  Array.prototype.forEach.call(buttons, function (btn) {
+    btn.addEventListener('click', function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+      var which = btn.getAttribute('data-mockup-load');
+      btn.removeAttribute('data-mockup-load');
+      btn.disabled = true;
+      btn.classList.add('is-loading');
+      import('/assets/scripts/mockup-' + which + '.js').catch(function () {
+        btn.classList.remove('is-loading');
+        btn.disabled = false;
+      });
     });
-  }, { rootMargin: '300px' });
-  Array.prototype.forEach.call(stages, function (el) { io.observe(el); });
-})();
+  });
 
-// a stage progresszív háttere (screenshot) eltűnik, amint a WebGL canvas kész
-(function () {
+  // a stage progresszív háttere (screenshot) eltűnik, amint a WebGL canvas kész
   var stages = document.querySelectorAll('.dmk-stage');
   Array.prototype.forEach.call(stages, function (stage) {
     var mo = new MutationObserver(function () {
