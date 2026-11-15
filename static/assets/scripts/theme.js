@@ -26,15 +26,12 @@
   var panel = document.getElementById('site-topbar');
   var backdrop = document.getElementById('menu-backdrop');
   if (!fab || !panel) return;
-  var closeBtn = panel.querySelector('[data-panel-close]');
   function setOpen(open) {
     panel.classList.toggle('is-open', open);
     fab.setAttribute('aria-expanded', open ? 'true' : 'false');
     if (backdrop) backdrop.hidden = !open;
     document.body.style.overflow = open ? 'hidden' : '';
-    if (closeBtn) closeBtn.hidden = !open;
   }
-  if (closeBtn) closeBtn.addEventListener('click', function () { setOpen(false); });
   fab.addEventListener('click', function () { setOpen(!panel.classList.contains('is-open')); });
   // BUG-01: asztali szelesseg felett a nyitott drawer automatikusan bezarodik
   var mq = window.matchMedia('(min-width: 1024px)');
