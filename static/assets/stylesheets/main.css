@@ -1,4 +1,4 @@
-@import url('armands-ui.css?v=1.6');
+@import url('armands-ui.css?v=1.7');
 
 /* Ez a fájl az oldalspecifikus stílus; a token-séma és a
    primitívek szerződése: armands-ui.css fejléce. Színek csak tokenekben. */
@@ -171,8 +171,7 @@ a:hover {
   color: var(--bg-alt);
 }
 
-a,
-a:hover {
+a {
   text-decoration: none;
   border: none;
   border-style: none;
@@ -309,7 +308,7 @@ body.page-landing p {
   text-transform: uppercase;
   font-size: 16px;
   line-height: 16px;
-  margin-bottom: 40px;
+  margin-bottom: 28px;
   letter-spacing: 0.4px;
   color: var(--h1);
 }
@@ -354,7 +353,7 @@ body.page-landing p {
   text-transform: uppercase;
   font-size: 11px;
   line-height: 11px;
-  margin-bottom: 31px;
+  margin-bottom: 20px;
   color: var(--muted);
   letter-spacing: 2px;
   /* AAA kontraszt: a 0.5-ös opacity a sötét háttéren ~3:1 arányt adott */
@@ -794,11 +793,11 @@ input[type="file"] {
 /* ============ Portfólió (.dev) ============ */
 /* Vízszintes odébbcsúszás kizárva (classikus scrollbars mellett is) */
 html, body { overflow-x: clip; }
-.site-main { padding: 2rem clamp(0.8rem, 3vw, 1.6rem) 3rem; }
+.site-main { padding: 1.5rem clamp(0.8rem, 3vw, 1.6rem) 2rem; }
 .wrap { width: min(calc(100% - 2rem), var(--au-container)); margin-inline: auto; }
 .section-title {
   /* armands-ui .au-section-title-ra épül; dev-extrák: */
-  margin: 2.5rem 0 1.2rem;
+  margin: 1.5rem 0 1rem;
   padding-bottom: 0.5rem;
 }
 .button-cta--small {
@@ -866,10 +865,10 @@ html, body { overflow-x: clip; }
 .project-detail .project-card__links { border-top: 1px solid var(--border); padding-top: 1.2rem; }
 
 /* Térközpontosítás: CTA – rács – footer között levegő */
-.featured { margin-bottom: 1.8rem; }
-.categories { margin: 1.8rem 0 2.5rem; }
-.social-media-profiles { margin-top: 2.5rem; }
-.footer-links { padding: 1.5rem 0 1rem; }
+.featured { margin-bottom: 1rem; }
+.categories { margin: 1.2rem 0 1.5rem; }
+.social-media-profiles { margin-top: 1.5rem; }
+.footer-links { padding: 1rem 0 0.8rem; }
 .footer-links .wrap { display: block; }
 /* kontraszt (WCAG): explicit --muted, ne opacity-csökkentés */
 .footer-links .copyright { color: var(--muted); margin-top: 0.8rem; }
