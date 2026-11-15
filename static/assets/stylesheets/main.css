@@ -812,6 +812,11 @@ html, body { overflow-x: clip; }
   display: grid; gap: 1.2rem;
   grid-template-columns: repeat(auto-fill, minmax(min(100%, 290px), 1fr));
 }
+
+/* DEV-03: keskenyebb nézeten már 1 oszlop (a magas, csonka kártyák elkerülésére) */
+@media only screen and (max-width: 900px) {
+  .project-grid { grid-template-columns: 1fr; }
+}
 .project-card {
   /* armands-ui v0.3 .au-card-ra épül; dev-extrák: */
   padding: 1.2rem 1.3rem;
@@ -923,3 +928,61 @@ html, body { overflow-x: clip; }
 .dmk-load.is-loading { opacity: 0.6; pointer-events: none; }
 .dmk-stage.canvas-ready .dmk-load { display: none; }
 @media (prefers-reduced-motion: reduce) { .dmk-load { transition: none; } }
+
+/* DEV-01: a panel fejlécében a cím csonkolódik, az X mindig látszik */
+@media only screen and (max-width: 1024px) {
+  .au-topbar__inner .au-topbar__brand {
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    flex: 1 1 auto;
+    padding-right: 0.5rem;
+  }
+  .au-topbar__panel-close {
+    position: absolute; top: 0.7rem; right: 66px; /* a FAB-tól (12+46+8) balra */
+    width: 44px; height: 44px;
+    background: transparent; border: 1px solid var(--border);
+    border-radius: 8px; color: var(--text); font-size: 1.1rem;
+    cursor: pointer; z-index: 5;
+  }
+  .au-topbar__inner { position: fixed; }
+  .au-topbar__inner .au-topbar__brand { padding-right: 3.2rem; }
+}
+
+/* DEV-02: a hosszú márkanév + linkek ~800–950px-en sem férnek el –
+   a réteg 760-as container-query-jét a deven 1024-re emeljük. */
+@container (min-width: 761px) and (max-width: 1024px) {
+  .au-topbar { background: transparent; border-bottom: none; }
+  .au-topbar__inner {
+    position: fixed; top: 0; right: 0; bottom: 0; z-index: 85;
+    width: Min(320px, 86vw);
+    box-sizing: border-box;
+    flex-direction: column; align-items: stretch; gap: 0.8rem;
+    padding: 1rem;
+    background: var(--au-topbar-bg, var(--input-bg));
+    border-left: 1px solid var(--border);
+    transform: translateX(105%);
+    transition: transform 240ms ease;
+    overflow-y: auto;
+  }
+  .au-topbar.is-open .au-topbar__inner { transform: translateX(0); }
+  .au-topbar__brand { display: none; }
+  .au-topbar.is-open .au-topbar__brand { display: inline-flex; }
+  .au-topbar__menu { flex: 0 0 auto; flex-direction: column; gap: 0.2rem; justify-content: flex-start; }
+  .au-topbar__menu a { width: 100%; }
+  .au-topbar__tools { display: grid; grid-template-columns: 1fr 1fr; gap: 0.6rem; align-items: stretch; }
+  .au-topbar__tools .lang-switch, .au-topbar__tools .theme-toggle { margin-left: 0; width: 100%; }
+  .au-topbar__tools .au-lang__btn { width: 100%; justify-content: center; }
+  .au-menu-fab {
+    display: inline-flex; align-items: center; justify-content: center;
+    position: fixed; top: 12px; right: 12px; z-index: 90;
+    width: 46px; height: 46px; border-radius: 8px;
+    background: var(--input-bg); border: 1px solid var(--border);
+    color: var(--text); font-size: 1.2rem; cursor: pointer;
+    box-shadow: 0 6px 18px var(--au-shadow, rgba(0, 0, 0, 0.25));
+  }
+}
+@media only screen and (max-width: 1024px) {
+  /* a desktop menü a dev-en 1024 alatt már ne látszódjon (CQ-panel mód) */
+}
