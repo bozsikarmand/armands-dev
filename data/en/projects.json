@@ -1,5 +1,25 @@
 [
   {
+    "id": "kesesfigyelo-v3",
+    "title": "Késésfigyelő v3",
+    "summary": "Real-time Budapest transit delay tracker: GTFS-RT feeds collected every minute on the Cloudflare free tier — Workers, D1, KV, R2, zero maintenance cost.",
+    "tags": [
+      "GTFS-RT",
+      "Cloudflare Workers",
+      "D1",
+      "KV",
+      "R2",
+      "Free Tier"
+    ],
+    "category": "software",
+    "links": {
+      "repo": "",
+      "live": "https://kesesfigyelo.armands.dev"
+    },
+    "featured": true,
+    "detail": true
+  },
+  {
     "id": "bar-project",
     "title": "Bar Project",
     "summary": "Interactive 3D bar visualisation built for a computer graphics course — WebGL, custom shaders and procedural geometry.",

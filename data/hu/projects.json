@@ -1,5 +1,25 @@
 [
   {
+    "id": "kesesfigyelo-v3",
+    "title": "Késésfigyelő v3",
+    "summary": "Budapesti közösségi közlekedés valós idejű késésfigyelője: GTFS-RT feedek percenkénti gyűjtése a Cloudflare free tieren — Workers, D1, KV, R2, nulla fenntartási költség.",
+    "tags": [
+      "GTFS-RT",
+      "Cloudflare Workers",
+      "D1",
+      "KV",
+      "R2",
+      "Free Tier"
+    ],
+    "category": "software",
+    "links": {
+      "repo": "",
+      "live": "https://kesesfigyelo.armands.dev"
+    },
+    "featured": true,
+    "detail": true
+  },
+  {
     "id": "bar-project",
     "title": "Bar Project",
     "summary": "Interaktív 3D bár-vizualizáció számítógépes grafika kurzusra — WebGL, saját shaderek és procedurális geometria.",

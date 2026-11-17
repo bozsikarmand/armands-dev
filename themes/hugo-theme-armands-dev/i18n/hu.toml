@@ -52,6 +52,7 @@ filter_all = "Mind"
 filter_empty = "Nincs projekt ebben a kategóriában."
 back_to_projects = "Vissza a projektekhez"
 nav_site = "Site"
+nav_labs = "Laborok"
 
 
 notFound = "A keresett oldal nem létezik."
