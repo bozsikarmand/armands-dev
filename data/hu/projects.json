@@ -72,6 +72,25 @@
     "detail": true
   },
   {
+    "id": "vivace",
+    "title": "Vivace",
+    "summary": "Single-tenant, config-as-code státuszoldal – egy status.yml, egy SQLite adatbázis, egy statikus frontend. Ugyanaz a mag, két vékony adapter: Cloudflare Workers (cron + D1) vagy sima Node.js (beépített scheduler + node:sqlite). Fiókok és admin felület nélkül.",
+    "tags": [
+      "Cloudflare Workers",
+      "D1",
+      "SQLite",
+      "Node.js",
+      "Config as Code"
+    ],
+    "category": "software",
+    "links": {
+      "repo": "https://gitlab.com/bozsikarmand/vivace",
+      "live": "https://status.armands.dev"
+    },
+    "featured": false,
+    "detail": true
+  },
+  {
     "id": "homelab-k3s",
     "title": "Homelab Kubernetes cluster",
     "summary": "Saját üzemeltetésű k3s klaszter GitOps folyamatos szállítással — minden szolgáltatás Gitben deklarálva, Argo CD automatikusan telepíti.",

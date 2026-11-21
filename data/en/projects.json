@@ -72,6 +72,25 @@
     "detail": true
   },
   {
+    "id": "vivace",
+    "title": "Vivace",
+    "summary": "Single-tenant, config-as-code status page — one status.yml, one SQLite database, one static frontend. Same core, two thin adapters: Cloudflare Workers (cron + D1) or plain Node.js (built-in scheduler + node:sqlite). No accounts, no admin UI.",
+    "tags": [
+      "Cloudflare Workers",
+      "D1",
+      "SQLite",
+      "Node.js",
+      "Config as Code"
+    ],
+    "category": "software",
+    "links": {
+      "repo": "https://gitlab.com/bozsikarmand/vivace",
+      "live": "https://status.armands.dev"
+    },
+    "featured": false,
+    "detail": true
+  },
+  {
     "id": "homelab-k3s",
     "title": "Homelab Kubernetes cluster",
     "summary": "Self-hosted k3s cluster with GitOps continuous delivery — every service declared in Git, deployed automatically by Argo CD.",
